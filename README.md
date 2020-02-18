@@ -3,7 +3,8 @@
 
 Classical Ping-Pong game with multiplayer functionality playable in LAN connected individual systems. The Host system needs to host a game and client connects to this request. Each of the connected system can control the player using keyboard keys. Goal is to keep the ball with the bounds.
 
-![Alt text](screenshot.png)
+![alt text](live.png)
+
 
 ## Installation
 ```sh
