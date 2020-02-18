@@ -1,15 +1,25 @@
 # Multiplayer PING-PONG Game
-Classic Ping-Pong game with multiplayer functionality playable in LAN connected individual systems. The Host system needs to host a game and client connects to this request.
+> Python game implemeted using pygame and PodSixNet
 
-## Prerequisite
-Packages Required:
-1. Python 2: [link](https://www.python.org/downloads/)
-2. PodSixNet 
-3. pygame
+Classical Ping-Pong game with multiplayer functionality playable in LAN connected individual systems. The Host system needs to host a game and client connects to this request. Each of the connected system can control the player using keyboard keys. Goal is to keep the ball with the bounds.
 
-## Run the program
-Run the server program in one system and client in another </br>
+![alt text](screenshot.png)
 
-Enter Port number e.g. 8000
-## Author
-Roshan 
+## Installation
+```sh
+pip install PodSixNet
+```
+
+## Usage
+One system runs the server program
+```sh
+python server.py
+```
+Enter the IP address on the device running the server program.</br>
+
+For the client device, run the client program,
+```sh
+python client.py
+```
+Enter the IP address of the server.
+ 

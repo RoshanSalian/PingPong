@@ -42,7 +42,7 @@ class GameX(ConnectionListener):
 
         # self.Connect()
         # Trying multi PC
-        address = raw_input('Address os server: ')
+        address = input('Address os server: ')
         try:
             if not address:
                 host, port = "localhost", 8000

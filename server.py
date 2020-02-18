@@ -75,11 +75,12 @@ class GameServer(Server):
 
     # function to move ball on screen
     def ball(self, ball_x, ball_y, gameID, out, positiveY, play):
-
+        out_count=0
         if out == 1:
             print("Out of bound")
-            # print(play)
-            # s.close()
+            out+=1
+            if(out>5):
+                break
         else:
             if play == 0:
                 ball_x += 2
@@ -100,8 +101,8 @@ class GameServer(Server):
 
         for i in range(0, len(g.player_channels)):
             g.player_channels[i].Send({"action": "ball", "x": ball_x, "y": ball_y})
-        
-        
+
+
 
 class Game(object):
 
@@ -128,9 +129,9 @@ class Player(object):
 if __name__ == "__main__":
     print("Server starting ")
 
-    # s = GameServer()
-    address, port = raw_input("Host:Port (localhost:8000): ")
-
+    # Previous line
+    # address, port = input("Host:Port (localhost:8000): ")
+    address = input("Host:Port (localhost:8000): ")
     if not address:
         host, port = "localhost", 8000
     else:
@@ -141,20 +142,3 @@ if __name__ == "__main__":
     while True:
         s.Pump()
         sleep(0.0001)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
